@@ -1,0 +1,21 @@
+#main #accordion{
+    min-height:600px;
+    width: 200px;
+    float:left;
+} 
+#main #accordion ul{
+    padding:0px;
+    /*text-align:left;*/
+
+}
+#main #accordion ul li{
+    padding:8px 20px;
+}
+#main #accordion ul li:hover{
+    background-color:#ddd;
+}
+#main #m_right{
+    min-height:600px;
+    overflow:hidden;
+    background-color:#ccc;
+}

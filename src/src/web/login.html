@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="password" id="password">
+    <input type="button" value="Login" id="btnLogin">
+
+    <script>
+        $(function(){
+            $('#btnLogin').click(function(){
+                $.post(global.apiBaseUrl + 'login', {username: $('#username').val(), password: $('#password').val()}, function(res){
+                    if(res.state){
+                        window.localStorage.setItem('token', res.data.token);
+                        window.location.href = 'payment.html';
+                    } else {
+                        $.alert('用户名或密码不正确');
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+<script src="./libs/global.js"></script>
+<script src="../js/require.js" data-main="../js/login" type="text/javascript"></script>
+</html>
