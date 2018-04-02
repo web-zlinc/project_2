@@ -1,0 +1,40 @@
+
+html,body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url('../img/bc.jpg') no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.form-horizontal{
+    padding: 15px 0 0 50px;
+    width: 404px;
+    margin: 200px auto;
+    z-index: 2;
+    background: rgb(210,235,255);
+    background-clip: padding-box;
+    border: 1px solid #999;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    .form-group{
+        .sa{
+            width: 200px;
+        }
+    }
+    .form-group:last-child{
+       padding-left: 88px;
+        button:last-child{
+            margin-left: 30px;
+        }
+    }
+}
+
+#myAlert{
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%,0);
+}

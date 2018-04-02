@@ -1,0 +1,37 @@
+#pay{
+    label{
+        float:right;
+        line-height: 44px;
+        margin:0 3px;
+        font-size:20px;
+    }
+    .pay-top{
+        float: right;
+        padding:5px;
+    }
+}
+.pay-box{
+    height:330px;
+    overflow-x:hidden;
+    #tab{
+        thead tr th,tbody tr td{
+            text-align:center;
+            font-size:16px;
+        }
+    } 
+}
+.pay-info{
+    float: right;
+    h4{
+        width: 130px;
+        .aa{
+            color:orange;
+            margin:0 5px;
+        }
+    }
+    #settle{
+        width: 100px;
+        font-size:18px;
+    }
+
+}

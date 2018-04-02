@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pay</title>
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/pay.css" />
+    <link rel="stylesheet" type="text/css" href="../css/edit.css" />
+</head>
+<body>
+    <header id="pay" class="clearfix">
+        <p class="pay-top col-xs-2">
+            <input type="text" id="search" name="search" class="form-control"/>
+        </p>
+        <label for="search" class="control-label">商品条形码</label>
+    </header>
+    <div class="pay-box">
+        <table class="table table-striped" id="tab">
+        <thead>
+            <tr><th>编号</th><th>名称</th><th>类型</th><th>价格</th><th>数量</th><th>产地</th><th>条形码</th><th>操作</th></tr>
+        </thead>
+        <!-- <tbody>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+        </tbody> -->
+        </table>   
+    </div>
+    <div class="pay-info clearfix">
+        <h4>数量：<span class="num aa">0</span><span>件</span></h4>
+        <h4>总价：<span class="total aa">0.00</span><span>元</span></h4>
+        <button type="button" class="btn btn-success btn-lg" id="settle" data-toggle="modal" data-target="#myModal" >结账付款</button>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        付款二维码
+                    </h4>
+                </div>
+                <div class="modal-body" id="qrcode" style="padding-left:50%;margin-left:-60px;">
+                    
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <div class="edit">
+        <h3>商品编辑<span class="editClose">&times;</span></h3>
+        <p><span>编号:</span><input type="text" disabled/></p>
+        <p><span>名称:</span><input type="text" disabled/></p>
+        <p><span>类型:</span><input type="text" disabled/></p>
+        <p><span>价格:</span><input type="text" disabled/></p>
+        <p><span>数量:</span><input type="text" /></p>
+        <p><span>产地:</span><input type="text" disabled/></p>
+        <p><span>条形码</span><input type="text" disabled/></p>
+        <p><button class="save">保存</button></p>
+    </div>
+    <script src="../js/require.js" data-main="../js/pay"></script>
+</body>
+</html>

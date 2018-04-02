@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>首页</title>
+        <link rel="stylesheet" type="text/css" href="./libs/jquery-ui-1.12.1/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/supplier.css" />
+
+
+    </head>
+    <body>
+        <header id="header"></header>
+        <main id="main" class="clearfix">
+            <div id="m_right">
+               <div class="title_ys">供货商资料</div> 
+               <div class="function_ys">
+                   <div class="addItem_ys">新增供货商</div>
+                   <div class="prev fl">上一页</div>
+                   <div class="next fl">下一页</div>
+                   <div class="fr">
+                       <input type="text" id="getInfor_ys" placeholder="搜索厂商名称"/>
+                       <input type="button" id="searchBtn_ys" value="查询"/>
+                       
+                   </div>
+               </div> 
+               <div class="information_ys">
+                   <table>
+                        <colgroup>
+                            <col width="80" />
+                            <col width="150" />
+                            <col width="200" />
+                            <col width="130" />
+                            <col width="150" />
+                            <col width="290" />
+                            <col width="120" />
+                            <col width="120" />
+                        </colgroup>
+                       <thead>
+                           <tr>
+                               <th>操作</th>
+                               <th>编号</th>
+                               <th>名称</th>
+                               <th>联系人</th>
+                               <th>联系电话</th>
+                               <th>地址</th>
+                               <th>商品类型</th>
+                               <th>结算方式</th>
+                               
+                           </tr>
+
+                       </thead>
+                       <tbody>
+                           <!-- <tr>
+                               <td class="edit">编辑</td>
+                               <td class="v_code">17001</td>
+                               <td class="v_name">达利园</td>
+                               <td class="linkname">达达</td>
+                               <td class="tel">13789876389</td>
+                               <td class="address">广东省广州市天河区元岗路1号</td>
+                               <td class="v_type">服装</td>
+                               <td class="payment">季结</td>
+                           </tr> -->
+                       </tbody>
+                   </table>
+               </div> 
+               <div class="asideTable_ys">
+                    <div class="editInfo">
+                        <div class="item editInput">
+                            <em>*</em>
+                            <label for="edit_number">供货商编号:</label>
+                            <input id="edit_number" class="edit_txt v_code" type="text"  placeholder="不能重复10位以内数字" maxlength="10" />
+                            <div id="tip_number" class="info">
+                                <b></b>
+                            </div>
+                        </div>
+                        <div class="item editInput">
+                            <em>*</em>
+                            <label for="edit_name">供货商名称:</label>
+                            <input id="edit_name" class="edit_txt v_name" type="text" value="" maxlength="100" />
+                            <div class="clearInputText"><b></b></div>             
+                        </div>
+                        <div class="item editInput">
+                            <label for="edit_linkman">联系人:</label>
+                            <input id="edit_linkman" class="edit_txt linkname" type="text" value="" maxlength="32" />
+                            <div class="clearInputText"><b></b></div>
+                        </div>
+                        <div class="item editInput">
+                            <label for="edit_tel">联系电话:</label>
+                            <input id="edit_tel" class="edit_txt tel" type="text" value="" maxlength="100" />
+                            <div class="clearInputText"><b></b></div>
+                        </div>
+                        <div class="item editInput textareaSupplier address">
+                            <label for="edit_address">地址:</label>
+                            <textarea rows="2" maxlength="100" class="edit_txt address" id="edit_address"></textarea>
+                        </div>
+                        <div class="item editInput type">
+                            <label for="edit_address">商品类型:</label>
+                            <select class="v_type">
+                                <option value="">食品</option>
+                                <option value="">饮料</option>
+                                <option value="">服装</option>
+                                <option value="">果冻</option>
+                                <option value="">glass</option>
+                                <option value="">film</option>
+                                <option value="">家居用品</option>
+                                <option value="">护肤品</option>
+                                <option value="">电子产品</option>
+                            </select>
+                        </div>
+                        <div class="item editInput payment">
+                            <label for="edit_payment">结算方式:</label>
+                            <select class="payment">
+                                <option value="">月结</option>
+                                <option value="">季结</option>
+                                <option value="">半年结</option>
+                                <option value="">年结</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="editBottom">
+                        <div class="btn save addSave changeSave">保存</div>
+                        <div class="btn cancel">取消</div>
+                        <div class="btn del"><b>删除</b></div>
+                    </div>
+               </div> 
+               
+            </div>
+        </main>
+    </body>
+    <script src="./js/require.js" data-main="./js/supplier" type="text/javascript"></script>
+</html>

@@ -1,0 +1,174 @@
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  display: flex;
+}
+
+#header .nav {
+  min-width: 170px;
+  color: #fff;
+  position: relative;
+  width: 170px;
+  line-height: 40px;
+  background-color: #0084B0;
+  padding-left: 10px;
+}
+
+#header .nav > span {
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  width: 19px;
+  height: 21px;
+  background: url("../img/n1.png") no-repeat;
+}
+
+#header .n_r {
+  min-width: 765px;
+  width: 40px;
+  color: #fff;
+  background-color: #0099CC;
+  flex: 1;
+}
+
+#header .n_r .n_r_l {
+  float: left;
+}
+
+#header .n_r .n_r_l li {
+  float: left;
+}
+
+#header .n_r .n_r_l li p {
+  line-height: 40px;
+  padding: 0 10px;
+}
+
+#header .n_r .n_r_l li:nth-child(1) {
+  border-right: 1px solid #0086C0;
+  position: relative;
+  padding-left: 32px;
+}
+
+#header .n_r .n_r_l li:nth-child(1) > span {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 21px;
+  height: 21px;
+  background: url("../img/home.png") no-repeat;
+}
+
+#header .n_r .n_r_l li:nth-child(2) {
+  position: relative;
+  padding-right: 20px;
+}
+
+#header .n_r .n_r_l li:nth-child(2) > span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 15px;
+  height: 40px;
+  background: url("../img/arr.png") no-repeat;
+}
+
+#header .n_r .n_r_l li:nth-child(3) p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#header .n_r .n_r_r {
+  float: right;
+  height: 40px;
+}
+
+#header .n_r .n_r_r ul {
+  width: 100%;
+  display: flex;
+}
+
+#header .n_r .n_r_r ul li {
+  position: relative;
+  border-right: 1px solid #17B6EE;
+  padding: 0 10px;
+}
+
+#header .n_r .n_r_r ul li > p {
+  line-height: 40px;
+}
+
+#header .n_r .n_r_r ul img {
+  margin-top: 10px;
+  display: block;
+  background: url("../img/logo_back.png") no-repeat;
+  width: 203px;
+  height: 17px;
+}
+
+#header .n_r .n_r_r ul span {
+  display: block;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+#header .n_r .n_r_r ul li:nth-child(2) {
+  padding-left: 33px;
+}
+
+#header .n_r .n_r_r ul li:nth-child(2) span {
+  background: url("../img/help.png") no-repeat;
+}
+
+#header .n_r .n_r_r ul li:nth-child(3) {
+  padding-left: 33px;
+}
+
+#header .n_r .n_r_r ul li:nth-child(3) span {
+  background: url("../img/server.png") no-repeat;
+}
+
+#header .n_r .n_r_r ul li:nth-child(4) {
+  padding-left: 38px;
+}
+
+#header .n_r .n_r_r ul li:nth-child(4) span {
+  background: url("../img/tool.png") no-repeat;
+}
+
+#main {
+  width: 100%;
+}
+
+#main #accordion {
+  float: left;
+  width: 180px;
+}
+
+#main #accordion ul {
+  padding: 0px;
+}
+
+#main #accordion ul li a {
+  display: block;
+  padding: 10px 30px;
+}
+
+#main .m_right {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+#main .m_right .content {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  min-height: 733px;
+}

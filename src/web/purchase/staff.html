@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/staff.css" />
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../libs/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="top clearfix form-inline" role="form">
+        <div class="tcl fl">
+            <button class="add btn btn-primary btn-lg" data-toggle="modal" data-target="#Insert">新增员工</button>
+        </div> 
+        <div class="tcr fr form-group">
+            <input type="text" class="form-control tj" placeholder="编号/姓名/电话">
+            <button class="find">查询</button>
+        </div>
+    </div>
+    <div class="main">
+        <table class="table table-striped table-bordered">
+            <thead>        
+                <tr>
+                    <th>序号</th>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>职位</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="tb">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 信息修改 -->
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width: 624px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">信息修改</h4>
+          </div>
+          <div class="insert modal-body" style="padding: 0">
+            <form class="form-horizontal bf" role="form">
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="number" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">编号：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control  E_code" id="number">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="name" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">姓名：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control  E_name" id="name">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="phone" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">电话：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control E_phone" id="phone">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="position" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">职位：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <select class="form-control E_position" id="position" style="height: 25px;width: 180px;margin-left: 20px;padding:0 12px;border: 1px solid #ccc;">
+                          <option>员工</option>
+                          <option>管理员</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="esc btn btn-default" data-dismiss="modal">退出</button>
+            <button type="button" class="e_save btn btn-primary">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 信息新增 -->
+    <div class="modal fade" id="Insert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document" style="width: 624px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">信息新增</h4>
+          </div>
+          <div class="insert modal-body" style="padding: 0">
+            <form class="form-horizontal bf" role="form">
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="number" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">编号：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control  I_code" id="number">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="name" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">姓名：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control  I_name" id="name">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="phone" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">电话：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <input type="text" class="form-control I_phone" id="phone">
+                    </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;">
+                    <label for="position" class="col-sm-2 control-label " style="width: 72px;padding: 0; float:left;">职位：</label>
+                    <div class="col-sm-10" style="float: left;padding: 0">
+                        <select class="form-control I_position" id="position" style="height: 25px;width: 180px;margin-left: 20px;padding:0 12px;border: 1px solid #ccc;">
+                          <option>员工</option>
+                          <option>管理员</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="esc btn btn-default" data-dismiss="modal">退出</button>
+            <button type="button" class="i_svae btn btn-primary">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="myModalDel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        友情提示
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    确定要删除此条记录？？
+                </div>
+                <div class="modal-footer footer1">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回
+                    </button>
+                    <button type="button" class="btn btn-primary delete">
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="../js/require.js" data-main="../js/staff" type="text/javascript"></script>
+</body>
+</html>

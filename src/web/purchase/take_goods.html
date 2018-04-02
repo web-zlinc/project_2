@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>take_goods</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/stock_in.css" />
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+   
+    <body>
+        <div id="div"></div>
+        <header class="clearfix">
+            <p class="control"><span class="enterKu">入库</span>
+            <span class="edit">编辑</span>
+            <span class="add">添加</span></p>           
+            <div>
+                <input type="txt" class="search" placeholder="商品名称/供应商"><button class="search_btn">查询</button>
+            </div>        
+        </header>
+     <table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th class="selectColumn" >选择</th>
+            <th>序号</th>
+            <th>商品名称</th>
+            <th>条形码</th>
+            <th>进货单号</th>
+            <th>商品类型</th>
+            <th>供应商名称</th>
+            <th>库存量</th>
+            <th>进货量</th>
+            <th>实际收货数量</th>
+            <th>进货价</th>
+            <th>小计</th>
+            <th>收货日期</th>
+            <th>支付方式</th>
+            <th>是否退货</th>
+        </tr>
+    </thead>
+     <tbody>
+    </tbody>
+    </table>
+    <div id="box2">         
+        <header>商品编辑<span>(*信息填写不完整，将无法保存)</span><span id="close">&times;</span></header>
+        <p><label for="gid">商品ID：</label><input id="gid" type="text" /></p>
+        <p><label for="r_goods">商品名称：</label><input id="r_goods" type="text" /></p>
+       <p><label for="barcode">条形码：</label><input id="barcode" type="text" /></p>
+       <p><label for="rid">运货单号：</label><input id="rid" type="text" /></p>
+       <p><label for="gtype">商品类型：</label><input id="gtype" type="text" /></p>
+       <p><label for="s_merchant">供应商名称：</label><input id="s_merchant" type="text" /></p>
+        <p><label for="gqty">库存量：</label><input id="gqty" type="text" /></p>
+       <p><label for="s_qty">进货量：</label><input id="s_qty" type="text" /></p>
+       <p><label for="real_qty">实际收货量：</label><input id="real_qty" type="text" /></p>
+       <p><label for="stock_price">进货价：</label><input id="stock_price" type="text" /></p>
+       <p><label for="subtotal">小计：</label><input id="subtotal" type="text" /></p>
+       <p><label for="t_date">收货日期：</label><input id="t_date" type="text" /></p>
+       <p><label for="t_pay">支付方式：</label><input id="t_pay" type="text" /></p>
+        <input id="save" type="button" value="保存"/>
+    </div>
+    </body>
+    <script src="../js/require.js" data-main="../js/take_goods" type="text/javascript"></script>
+</html>

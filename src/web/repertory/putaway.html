@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <title>PutAway</title>
+</head>
+
+<body>
+    <div class="table-responsive">
+
+        <div class="table" style="width:100%;">
+            <!-- Split button -->
+            <form>
+                <div class="btn-group" style="margin:10px;">
+                    <button type="button" class="btn btn-default" style="float:left;">查询所有</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" id="p_btn_select" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">查询所有</a>
+                        </li>    
+                        <li id="P_Gname">
+                            <a href="#">商品名称</a>
+                        </li>
+                        <li id="P_Gtype">
+                            <a href="#">商品类型</a>
+                        </li>
+                        <li id="P_Gid">
+                            <a href="#">编号</a>
+                        </li>
+                        <li id="P_no">
+                            <a href="#">未上架商品</a>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-info" id="P_search_btn">查询</button>
+                <label for="P_search"></label>
+                <input type="search" class="form-control" id="P_search_inp" placeholder="search" style="width:200px;float:left;margin-top:10px;">
+                <!-- <input type="button" class="btn btn-info" value="上架商品" id="ptwBtn" style="float:right; margin:10px;"> -->
+            </form>
+        </div>
+        <div class="table">
+            <table id="mainTable" class="table table-bordered table-hover" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin-top:30px;">
+
+                <thead>
+                    <tr>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-1">商品名称</th>
+                        <th class="col-md-1">条码</th>
+                        <th class="col-md-1">编号</th>
+                        <th class="col-md-1">商品分类</th>
+                        <th class="col-md-1">产地</th>
+                        <th class="col-md-1">库存</th>
+                        <th class="col-md-1">价格</th>
+                        <th class="col-md-1">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="noRecord" style="height:50px;">
+                        <td colspan="15">未查询到符合条件的记录</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Warning</h4>
+                </div>
+                <div class="modal-body">
+                    您确定删除此商品吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">否</button>
+                    <button type="button" class="btn btn-primary" id="putawayDel2">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../js/require.js" data-main="../js/putaway" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,246 @@
+h3.active_ys {
+  background-color: #58bc58;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#m_right .title_ys {
+  height: 40px;
+  background-color: #007fff;
+  color: #fff;
+  line-height: 40px;
+  font-weight: bold;
+  text-indent: 20px;
+}
+
+#m_right .function_ys {
+  height: 32px;
+  padding: 8px 10px;
+  background-clip: padding-box;
+}
+
+#m_right .function_ys .addItem_ys, #m_right .function_ys .prev, #m_right .function_ys .next {
+  margin-right: 20px;
+  padding: 0 8px;
+  float: left;
+  line-height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: background-color ease .5s, border ease .5s;
+  border: 1px solid #ccc;
+}
+
+#m_right .function_ys .addItem_ys:hover, #m_right .function_ys .prev:hover, #m_right .function_ys .next:hover {
+  height: 30px;
+  padding: 0 8px;
+  float: left;
+  line-height: 30px;
+  color: #09c;
+  background-color: #e5f5fa;
+  border: 1px solid #5ac;
+}
+
+#m_right .function_ys #getInfor_ys {
+  height: 14px;
+  margin: 0 3px;
+  padding: 4px 8px;
+  line-height: 14px;
+  float: left;
+  color: #888;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+#m_right .function_ys #searchBtn_ys {
+  height: 22px;
+  border: 1px solid #f80;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 0 0 0 8px;
+  padding: 0 8px;
+  float: left;
+  color: #fff;
+  background: #fb3;
+  -webkit-transition: background ease .3s,border ease .3s;
+  transition: background ease .3s,border ease .3s;
+  position: relative;
+}
+
+#m_right .information_ys thead tr th {
+  height: 40px;
+  background: #d5e9ed;
+  border-right: 1px solid #abd3db;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  color: #09c;
+  font-weight: bold;
+  text-align: center;
+}
+
+#m_right .information_ys tbody tr {
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+#m_right .information_ys tbody tr td {
+  height: 40px;
+  border-right: 1px solid #ccc;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+#m_right .information_ys tbody tr .edit {
+  padding: 0 2px;
+  font-size: 12px;
+  margin: 0;
+  color: #09c;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+#m_right .asideTable_ys {
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 100;
+  background-color: #fff;
+  display: none;
+}
+
+#m_right .asideTable_ys .editInfo {
+  padding-left: 30px;
+  width: 480px;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  direction: ltr;
+  border: 1px solid #ccc;
+}
+
+#m_right .asideTable_ys .editInfo .item {
+  width: 438px;
+  float: left;
+  margin: 10px 0 0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: left;
+  transition: .5s ease;
+  position: relative;
+}
+
+#m_right .asideTable_ys .editInfo .item label {
+  width: 82px;
+  height: 38px;
+  padding: 0 0 0 10px;
+  line-height: 38px;
+  float: left;
+  color: #999;
+  border-right: 1px solid #fff;
+  transition: .5s ease;
+  cursor: default;
+}
+
+#m_right .asideTable_ys .editInfo .item label:hover {
+  outline: -webkit-focus-ring-color auto 5px;
+  background: #ddd;
+  border-right: 1px solid #ddd;
+}
+
+#m_right .asideTable_ys .editInfo .item em {
+  color: #f55;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  left: -13px;
+  top: 12px;
+}
+
+#m_right .asideTable_ys .editInfo .item textarea {
+  width: 327px;
+  overflow: hidden;
+  margin: 0 10px 0 8px;
+  padding: 9px 0;
+  border: 0;
+  float: left;
+  font-size: 14px;
+  color: #09c;
+  line-height: 24px;
+  outline: none;
+  resize: none;
+}
+
+#m_right .asideTable_ys .editInfo .item select {
+  height: 38px;
+  line-height: 38px;
+  color: #09c;
+  width: 345px;
+  float: right;
+  border: 0;
+}
+
+#m_right .asideTable_ys .editInfo input[type="text"] {
+  height: 20px;
+  line-height: 20px;
+  color: #09c;
+  font-size: 14px;
+  padding: 9px 10px;
+  border: 0;
+  float: left;
+}
+
+#m_right .asideTable_ys .editBottom {
+  width: 470px;
+  height: 40px;
+  padding: 10px;
+  background: #f4f4f4;
+  border-top: 1px solid #d5e9ed;
+  float: left;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+}
+
+#m_right .asideTable_ys .editBottom .btn {
+  text-align: center;
+  font-size: 16px;
+  line-height: 38px;
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#m_right .asideTable_ys .editBottom .save {
+  width: 180px;
+  height: 40px;
+  background: #09c;
+  color: #fff;
+  line-height: 40px;
+  float: right;
+  margin: 0 10px;
+}
+
+#m_right .asideTable_ys .editBottom .cancel {
+  width: 80px;
+  height: 38px;
+  background: #fff;
+  border: 1px solid #ccc;
+  float: right;
+  color: #999;
+}
+
+#m_right .asideTable_ys .editBottom .del {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+  margin: 0 10px;
+  transition: .3s ease;
+}

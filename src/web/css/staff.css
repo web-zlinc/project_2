@@ -1,0 +1,84 @@
+.top {
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.top .tcl {
+  padding-left: 20px;
+}
+
+.top .tcl button {
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.top .tcl button:hover {
+  background: #D5E9ED;
+}
+
+.top .tcr {
+  padding-right: 20px;
+}
+
+.top .tcr input {
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.top .tcr button {
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: #FFBB33;
+}
+
+.main .table th {
+  text-align: center;
+}
+
+.main .table .tb {
+  text-align: center;
+}
+
+.main .table .tb button {
+  padding: 4px 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.bf {
+    padding: 20px 70px;
+    padding-left: 150px; 
+}
+
+.bf input {
+  height: 25px;
+  width: 180px;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+}
+
+.bf button {
+  padding: 4px 10px;
+}
+
+.bf .bcn {
+  margin-left: 36px;
+  margin-right: 70px;
+}
+
+/*.page {
+  margin-right: 40px;
+  font-size: 16px;
+}
+
+.page a {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+
+.page a:hover {
+  background: #ddd;
+}*/

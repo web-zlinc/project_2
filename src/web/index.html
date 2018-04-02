@@ -3,72 +3,66 @@
     <head>
         <meta charset="UTF-8" />
         <title>首页</title>
-        <link rel="stylesheet" type="text/css" href="../web/libs/jquery-ui-1.12.1/jquery-ui.css" />
-        <link rel="stylesheet" type="text/css" href="../css/base.css" />
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="./libs/jquery-ui-1.12.1/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="./css/base.css" />
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+        
     </head>
     <body>
-    <header id="header"></header>
+    <header id="header">
+        <div class="nav"><h3>功能列表</h3><span></span></div>
+        <div class="n_r">
+            <ul class="n_r_l">
+                <li><span></span><p>门店概览</p></li>
+            </ul>
+            <div class="n_r_r">
+                <ul>
+                    <li><img src="" alt="" /></li>
+                    <li><span></span><p>帮助</p></li>
+                    <li><span></span><p>专属客服</p></li>
+                    <li><span></span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
     <main id="main" class="clearfix">
-    <!-- 左侧模块 -->
-    <aside id="accordion">
-        <h3>Section 1</h3>
-        <ul>
-            <li>s1 item</li>
-            <li>s1 item</li>
-            <li>s1 item</li>
-            <li>s1 item</li>
-            <li>s1 item</li>
-            <li>s1 item</li>
-            <li>s1 item</li>
-        </ul>
+        <!-- 左侧模块 -->
+        <aside id="accordion">
+            <h3>收银</h3>
+            <ul>
+                <li><a href="pay&order/pay.html" target="right">收银管理</a></li>
+            </ul>
 
-        <h3>Section 2</h3>
-        <ul>
-            <li>s2 item</li>
-            <li>s2 item</li>
-            <li>s2 item</li>
-            <li>s2 item</li>
-            <li>s2 item</li>
-            <li>s2 item</li>
-            <li>s2 item</li>
-        </ul>
-        <h3>Section 3</h3>
-        <ul>
-            <li>s3 item</li>
-            <li>s3 item</li>
-            <li>s3 item</li>
-            <li>s3 item</li>
-            <li>s3 item</li>
-            <li>s3 item</li>
-            <li>s3 item</li>
-        </ul>
-        <h3>Section 4</h3>
-        <ul>
-            <li>s4 item</li>
-            <li>s4 item</li>
-            <li>s4 item</li>
-            <li>s4 item</li>
-            <li>s4 item</li>
-            <li>s4 item</li>
-            <li>s4 item</li>
-        </ul>
-        <h3>Section 5</h3>
-        <ul>
-            <li>s5 item</li>
-            <li>s5 item</li>
-            <li>s5 item</li>
-            <li>s5 item</li>
-            <li>s5 item</li>
-            <li>s5 item</li>
-            <li>s5 item</li>
-        </ul>
-    </aside>
-    <!-- 右侧内容 -->
-    <div id="m_right">
-       <a href=""></a>
-    </div>
+            <h3>员工</h3>
+            <ul>
+                <li><a href="../web/purchase/staff.html" target="right">员工管理</a></li>
+            </ul>
+            <h3>会员</h3>
+            <ul>
+                <li><a href="../web/purchase/member.html" target="right">会员管理</a></li>
+            </ul>
+            <h3>采购</h3>
+            <ul>                       
+                <li><a href="../web/purchase/take_goods.html" target="right">进货管理</a></li>
+                <li><a href="../web/purchase/return_goods.html" target="right">退货管理</a></li>
+            </ul>
+            <h3>库存</h3>
+            <ul>
+                <li><a href="./repertory/product.html" target="right">库存管理</a></li>
+                <li><a href="./repertory/putaway.html" target="right">上架管理</a></li>
+            </ul>
+            <h3>供应商</h3>
+            <ul>
+               <li class="supplier"><a href="../web/supplier.html" target="right">供应商管理</a></li> 
+            </ul>
+                
+        </aside>
+        <!-- 右侧内容 -->
+        <div class="m_right">
+             <iframe class="content" name="right"></iframe>
+        </div>
+       
     </main>
 </body>
-<script src="../js/require.js" data-main="../js/index" type="text/javascript"></script>
+<script src="../web/js/require.js" data-main="../web/js/index" type="text/javascript"></script>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" id="vp"/>
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="../css/order.css" />
+</head>
+<body>
+    <header id="header">
+        <h2>订单页面</h2>
+    </header>
+    <table id="tab">
+        <thead>
+            <tr><th>编号</th><th>名称</th><th>价格</th><th>数量</th><th>条形码</th></tr>
+        </thead>
+        <!-- <tbody>
+            <tr><td>5a18c4c6ded5cba526b9236d</td><td>百事可乐</td><td>饮料</td><td>4.0</td><td>1</td><td>广东</td><td>111</td></tr>
+            <tr><td>5a18c4c6ded5cba526b9236d</td><td>百事可乐</td><td>饮料</td><td>4.0</td><td>1</td><td>广东</td><td>111</td></tr>
+            <tr><td>5a18c4c6ded5cba526b9236d</td><td>百事可乐</td><td>饮料</td><td>4.0</td><td>1</td><td>广东</td><td>111</td></tr>
+        </tbody> -->
+    </table>
+    <ul class="ul">
+        <li class="ul-li">数量：<span class="num">0</span></li>
+        <li class="ul-li">总价：<span class="total">0.00</span></li>
+    </ul>
+    <div id="qrcode"></div>
+    <input type="button" id="order" value="付款"/>
+</body>
+</html>
+<script src="../js/require.js" data-main="../js/order"></script>
+    <!-- <script type="text/javascript">
+    (function($){
+        
+        //页面刷新连接socket.io
+        var socket = io.connect("ws://10.3.135.17:8800");
+        // socket.on("result",function(response){
+        //     console.log(response);
+        //     var res = response
+        //     var $table = $('table')
+        //     $(html).appendTo($table);
+        //     var $tbody = $('<tbody/>');
+
+        //     var $num = $('.num');
+        //     var $total = $('.total');
+
+        //     $num.html(res.total_num);
+        //     $total.html(res.total_price);
+
+        //     var datalist = getHTML(JSON.parse(res.detail));
+        //     $tbody.html(datalist);
+        //     $tbody.appendTo($table);
+
+        // })
+
+        $.post(global.apiBaseUrl +'getorder',{},function(res){
+            // console.log(res);
+            var order = res;
+
+            var $table = $('table')
+            $(html).appendTo($table);
+            var $tbody = $('<tbody/>');
+
+            var $num = $('.num');
+            var $total = $('.total');
+
+            $num.html(order.products.total_num);
+            $total.html(order.products.total_price);
+
+            var datalist = getHTML(JSON.parse(order.products.detail));
+            $tbody.html(datalist);
+            $tbody.appendTo($table);
+        })
+
+
+
+        $('#order').click(function(){
+            socket.emit('success',{stats:"支付成功"});
+            document.write('支付成功');
+        })
+
+
+
+        function getHTML(datalist){
+            return datalist.map(function(item,idx){
+                    // var item = item[0];
+                    return `<tr data-id="${idx}"><td>${item._id}</td><td>${item.name}</td><td class="price">${item.price}</td><td class="qty">${item.qty}</td><td>${item.barcode}</td><td><button class="btnChange">修改</button><button class="btnClose">删除</button></td></tr>`
+                    }).join('');
+        }
+
+    }(jQuery))
+
+
+    </script> -->

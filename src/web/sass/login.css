@@ -1,0 +1,35 @@
+.form-horizontal {
+  height: 100%;
+  overflow: hidden;
+}
+.form-horizontal .box {
+  margin: 200px auto;
+  width: 400px;
+  background: #EFF4FD;
+  border: 1px solid #ccc;
+}
+.form-horizontal .box h1 {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.form-horizontal .box form {
+  padding: 10px 60px;
+}
+.form-horizontal .box form .sa {
+  padding: 0 5px;
+  margin-bottom: 20px;
+  width: 180px;
+  height: 20px;
+  border: 1px solid #ccc;
+  vertical-align: baseline;
+  margin-left: 20px;
+}
+.form-horizontal .box form #btnLogin {
+  margin: 20px 50px 10px;
+}
+.form-horizontal .box form .btn {
+  vertical-align: baseline;
+  padding: 5px 10px;
+}

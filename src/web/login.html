@@ -5,28 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    
+    <link rel="stylesheet" type="text/css" href="./libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" />
 </head>
 <body>
-    <input type="text" id="username">
-    <input type="password" id="password">
-    <input type="button" value="Login" id="btnLogin">
+    <form class="form-horizontal" >
+        <div class="form-group">
+          <h1 style="font-size: 26px;text-shadow: #000 0.08em 0.08em 0.08em;color: white; text-align: center;margin-bottom: 20px;margin-right: 25px;">超市后台管理系统</h1>
+        </div>
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label glyphicon glyphicon-user" aria-hidden="true">：</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control sa" id="username" placeholder="请输入账户">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label glyphicon glyphicon-lock" aria-hidden="true">：</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control sa" id="password" placeholder="请输入密码">
+            </div>
+        </div>
 
-    <script>
-        $(function(){
-            $('#btnLogin').click(function(){
-                $.post(global.apiBaseUrl + 'login', {username: $('#username').val(), password: $('#password').val()}, function(res){
-                    if(res.state){
-                        window.localStorage.setItem('token', res.data.token);
-                        window.location.href = 'payment.html';
-                    } else {
-                        $.alert('用户名或密码不正确');
-                    }
-                })
-            })
-        })
-    </script>
+        <div class="form-group">
+            <label for="identity" class="col-sm-2 control-label glyphicon glyphicon-home" aria-hidden="true"">：</label>
+            <div class="col-sm-10">
+                <select class="form-control sa" id="identity">
+                  <option>员工</option>
+                  <option>管理员</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary " id="btnLogin">登录</button>
+            <button type="button" class="btn btn-info" id="btnregister">注册</button>
+        </div>
+    </form>
+
+    <div id="myAlert" class="alert alert-success" style="position: fixed;top: 30px;left: 50%;transform: translate(-50%,0); width: 450px;display: none;">
+      <a href="#" class="close" data-dismiss="alert">&times;</a>
+      <strong>登陆成功！</strong>
+    </div>
+<!-- 
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">小模态框</button>
+
+    <div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: block; padding-right: 17px;">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div> 
+    </div> -->
 </body>
-<script src="./libs/global.js"></script>
-<script src="../js/require.js" data-main="../js/login" type="text/javascript"></script>
+<script src="js/require.js" data-main="js/login" type="text/javascript"></script>
 </html>

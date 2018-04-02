@@ -1,0 +1,146 @@
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+header {
+  padding-top: 5px;
+  height: 35px;
+}
+
+header > P {
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+
+header > P > span {
+  display: inline;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #5bc0de;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+header > div {
+  float: right;
+  height: 40px;
+}
+
+header > div input {
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  height: 25px;
+  width: 130px;
+}
+
+header > div button {
+  border-radius: 3px;
+  margin: 0 20px;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #FFBB33;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+table th {
+  text-align: center;
+}
+
+table td {
+  border: 1px solid #ddd;
+}
+
+table td button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #5bc0de;
+  color: #FFF;
+}
+
+#box2 {
+  position: absolute;
+  top: 0px;
+  left: 290px;
+  width: 703px;
+  height: 350px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+#box2 p {
+  float: left;
+  width: 350px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+#box2 p input {
+  border: 1px solid #ddd;
+}
+
+#box2 label {
+  width: 100px;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+#box2 > header {
+  padding-left: 10px;
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+#box2 > header > span:nth-child(1) {
+  color: red;
+}
+
+#box2 > header #close {
+  display: block;
+  float: right;
+  padding: 0 10px;
+}
+
+#box2 > header #close:hover {
+  background-color: orange;
+}
+
+#box2 #save {
+  position: absolute;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -7%;
+}
+
+#box2 #save:hover {
+  background-color: orange;
+  color: #fff;
+}
+
+.opt {
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.enter {
+  background-color: #fff;
+  opacity: 1;
+}
